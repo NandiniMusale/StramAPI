@@ -6,13 +6,11 @@ import java.util.stream.Collectors;
 
 public class Example1 {
     public static void main(String[] args) {
-    int[] arr = new int[]{12,10,13,15,20};
-    List<Integer> list = Arrays.stream(arr).boxed().collect(Collectors.toList());
-
-    List<Integer> newList = list.stream().filter(n->n%5==0).toList();
-
-    newList.stream().forEach(System.out::println);
-
+    int [] arr =new int[]{1,2,15,30,40};
+    List<Integer> list =Arrays.stream(arr).boxed().collect(Collectors.toList());
+      //list.stream().filter(n -> n%5==0).forEach(System.out :: println);
+    List<Integer> ans=list.stream().filter(n -> n%5==0).toList();
+    ans.stream().forEach(System.out :: println);
     }
 
 }
